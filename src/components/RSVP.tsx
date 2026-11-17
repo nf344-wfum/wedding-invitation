@@ -70,18 +70,23 @@ export const RSVP: React.FC = () => {
               </motion.a>
             </div>
 
-            {/* Event Information Phone Number Display Info */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-ivory-100 border border-gold-500/40 text-xs text-ink-muted">
+            {/* Event Information Phone Number Display Info (Clickable for mobile 1-tap call) */}
+            <motion.a
+              href={phoneUrl}
+              whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-ivory-100 border border-gold-500/50 text-xs text-ink-muted hover:border-crimson-700 hover:text-crimson-700 transition-colors shadow-2xs active:scale-98 cursor-pointer"
+              aria-label={`Call ${CONTENT.contact.informationPhone.display}`}
+            >
               <CheckCircle2 size={14} className="text-crimson-700 shrink-0" />
               <span>
                 {t.rsvpContactLabel}
-                <strong className="text-crimson-700 tracking-wider font-bold ml-1">
+                <strong className="text-crimson-700 tracking-wider font-bold ml-1 underline decoration-gold-500/50 underline-offset-2">
                   {lang === 'en'
                     ? CONTENT.contact.informationPhone.display
                     : CONTENT.contact.informationPhone.displayBn}
                 </strong>
               </span>
-            </div>
+            </motion.a>
           </div>
         </RevealSection>
 
@@ -124,26 +129,31 @@ export const RSVP: React.FC = () => {
                 >
                   <div className="p-4 sm:p-5 pt-0 border-t border-gold-500/30 text-xs sm:text-sm space-y-4">
                     {/* Hosts (With love / দাওয়াতান্তে) */}
-                    <div>
-                      <h4 className="font-bold text-gold-700 uppercase tracking-wider text-[11px] mb-1.5">
+                    <div className="bg-ivory-100/60 rounded-xl p-3 sm:p-3.5 border border-gold-500/30">
+                      <h4 className="font-english-display italic text-crimson-700 text-sm sm:text-base font-semibold mb-1">
                         {t.accordion.withLove}
                       </h4>
-                      <div className="space-y-0.5 text-ink font-semibold">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-ink font-semibold">
                         {CONTENT.hosts.members.map((member, idx) => (
-                          <p key={idx}>{member[lang]}</p>
+                          <span key={idx} className="text-xs sm:text-sm tracking-wide">
+                            {member[lang]}
+                          </span>
                         ))}
                       </div>
                     </div>
 
                     {/* Welcoming Committee with Staggered Entrance (Welcoming you / অভ্যর্থনায়) */}
                     <div>
-                      <h4 className="font-bold text-gold-700 uppercase tracking-wider text-[11px] mb-1.5">
-                        {t.accordion.welcoming}
-                      </h4>
-                      <StaggerContainer className="flex flex-wrap gap-1.5" staggerDelay={0.04}>
+                      <div className="flex items-center gap-1.5 mb-2">
+                        <IslamicStar size={11} className="text-gold-700" />
+                        <h4 className="font-bold text-gold-700 uppercase tracking-widest text-[11px]">
+                          {t.accordion.welcoming}
+                        </h4>
+                      </div>
+                      <StaggerContainer className="flex flex-wrap gap-1.5 sm:gap-2" staggerDelay={0.03}>
                         {CONTENT.welcomingCommittee.members.map((member, idx) => (
                           <StaggerItem key={idx}>
-                            <span className="inline-block px-2.5 py-1 rounded-full bg-ivory-100 border border-gold-500/40 text-ink text-xs font-medium hover:border-gold-700 transition-colors">
+                            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-gradient-to-b from-[#FFFDF9] to-[#F5ECE0] border border-gold-500/50 text-ink text-xs sm:text-[13px] font-medium shadow-[0_1px_2px_rgba(184,145,58,0.12)] hover:border-gold-700 hover:text-crimson-700 transition-colors">
                               {member[lang]}
                             </span>
                           </StaggerItem>

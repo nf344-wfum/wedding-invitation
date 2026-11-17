@@ -54,30 +54,30 @@ export const CountdownStrip: React.FC = () => {
 
             {/* 4 Countdown Units (Ivory numbers, Gold-300 labels) */}
             <div
-              className="flex items-center justify-center gap-3 sm:gap-6"
+              className="flex items-center justify-center gap-1.5 xs:gap-2.5 sm:gap-6"
               role="timer"
               aria-live="off"
             >
               {units.map((unit, index) => (
                 <div key={unit.label} className="flex items-center">
-                  <div className="flex flex-col items-center min-w-[50px] sm:min-w-[62px]">
+                  <div className="flex flex-col items-center min-w-[46px] xs:min-w-[54px] sm:min-w-[64px] px-1 py-0.5 rounded-md bg-crimson-950/40 border border-gold-500/20 shadow-2xs">
                     <motion.span
                       key={unit.value}
                       initial={prefersReducedMotion ? {} : { y: -3, opacity: 0.8 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.2 }}
-                      className="font-english-display text-xl sm:text-2xl md:text-3xl font-bold text-ivory-50 tracking-tight leading-none"
+                      className="font-english-display text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-ivory-50 tracking-tight leading-none"
                     >
                       {unit.value}
                     </motion.span>
-                    <span className="text-[10px] sm:text-xs font-medium text-gold-300 mt-1 uppercase tracking-wider">
+                    <span className="text-[9px] xs:text-[10px] sm:text-xs font-medium text-gold-300 mt-0.5 uppercase tracking-wider">
                       {unit.label}
                     </span>
                   </div>
 
-                  {/* Elegant gold separator dot */}
+                  {/* Elegant gold separator colon */}
                   {index < units.length - 1 && (
-                    <span className="text-gold-500/50 text-base sm:text-lg font-light mx-1 sm:mx-1.5 select-none">
+                    <span className="text-gold-500/60 text-sm sm:text-base font-light mx-0.5 xs:mx-1 sm:mx-1.5 select-none">
                       :
                     </span>
                   )}

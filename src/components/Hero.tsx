@@ -270,11 +270,11 @@ export const Hero: React.FC = () => {
             initial={prefersReducedMotion ? {} : { opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.16 }}
-            className="font-english-display text-2xl sm:text-3xl md:text-xl lg:text-2xl font-semibold text-crimson-700 tracking-tight leading-snug my-0.5 sm:my-1 drop-shadow-sm"
+            className="font-english-display text-[1.25rem] xs:text-[1.4rem] sm:text-2xl md:text-xl lg:text-2xl font-semibold text-crimson-700 tracking-tight leading-snug my-0.5 sm:my-1 drop-shadow-sm"
           >
-            {CONTENT.groom.name[lang]}{' '}
-            <span className="font-light italic text-gold-700">&</span>{' '}
-            {CONTENT.bride.name[lang]}
+            <span className="inline-block whitespace-nowrap">{CONTENT.groom.name[lang]}</span>{' '}
+            <span className="font-light italic text-gold-700 mx-0.5 text-[0.9em]">&amp;</span>{' '}
+            <span className="inline-block whitespace-nowrap">{CONTENT.bride.name[lang]}</span>
           </motion.h1>
 
           {/* 4. Subtitle "Wedding Ceremony" in artistic script */}
@@ -284,9 +284,9 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.24 }}
             className={`${
               lang === 'en'
-                ? 'font-artistic text-2xl sm:text-3xl md:text-2xl lg:text-3xl text-crimson-700 tracking-wide leading-none my-1'
+                ? 'font-artistic text-[1.85rem] xs:text-3xl sm:text-4xl md:text-2xl lg:text-3xl text-crimson-700 tracking-wide leading-tight py-0.5 my-0.5'
                 : 'font-bangla-serif text-sm sm:text-base font-bold text-crimson-700 tracking-wide my-0.5'
-            } drop-shadow-xs`}
+            } drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]`}
           >
             {t.subtitle}
           </motion.p>

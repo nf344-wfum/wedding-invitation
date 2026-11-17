@@ -33,6 +33,14 @@
       -webkit-tap-highlight-color: transparent;
     }
 
+    html {
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-text-size-adjust: 100%;
+      touch-action: manipulation;
+    }
+
     body {
       background-color: var(--ivory-50);
       color: var(--ink);
@@ -440,13 +448,14 @@
       gap: 6px;
     }
     .welcoming-pill {
-      background: var(--ivory-50);
-      border: 1px solid rgba(184, 145, 58, 0.4);
+      background: linear-gradient(180deg, #FFFDF9 0%, #F5ECE0 100%);
+      border: 1px solid rgba(184, 145, 58, 0.55);
       color: var(--ink);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      padding: 4px 12px;
+      padding: 5px 13px;
       border-radius: 20px;
+      box-shadow: 0 1px 2px rgba(184, 145, 58, 0.12);
     }
 
     /* Footer */
