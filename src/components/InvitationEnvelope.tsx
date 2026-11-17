@@ -116,29 +116,27 @@ export const InvitationEnvelope: React.FC<InvitationEnvelopeProps> = ({
     }
   }, [isOpen])
 
-  // Continuous, seamless 3.4-second opening sequence
+  // Continuous, silky-smooth 0.8s opening sequence
   const handleStartOpen = useCallback(async () => {
     if (isRunningRef.current || isOpening) return
     isRunningRef.current = true
     setIsOpening(true)
     clearAllTimeouts()
 
-    // Reduced motion mode: gentle 0.5s crossfade
+    // Reduced motion mode: gentle 0.4s crossfade
     if (prefersReducedMotion) {
       try {
         if (cardRef.current) cardRef.current.style.zIndex = '10'
         await Promise.all([
-          baseControls.start({ opacity: 0, transition: { duration: 0.5 } }),
-          pocketControls.start({ opacity: 0, transition: { duration: 0.5 } }),
-          flapControls.start({ opacity: 0, transition: { duration: 0.5 } }),
-          sealControls.start({ opacity: 0, transition: { duration: 0.5 } }),
-          uiControls.start({ opacity: 0, transition: { duration: 0.5 } }),
+          baseControls.start({ opacity: 0, transition: { duration: 0.4 } }),
+          pocketControls.start({ opacity: 0, transition: { duration: 0.4 } }),
+          flapControls.start({ opacity: 0, transition: { duration: 0.4 } }),
+          sealControls.start({ opacity: 0, transition: { duration: 0.4 } }),
+          uiControls.start({ opacity: 0, transition: { duration: 0.4 } }),
           cardControls.start({
-            opacity: 1,
-            scale: 1.03,
-            boxShadow:
-              '0 20px 45px -10px rgba(58, 42, 34, 0.32), 0 0 0 1px rgba(184, 145, 58, 0.35)',
-            transition: { duration: 0.5 },
+            opacity: 0,
+            scale: 1.05,
+            transition: { duration: 0.4 },
           }),
         ])
         sessionStorage.setItem('envelope_opened', 'true')
@@ -153,96 +151,58 @@ export const InvitationEnvelope: React.FC<InvitationEnvelopeProps> = ({
     }
 
     try {
-      // -------------------------------------------------------------
-      // 0.0s – 0.8s: Flap opens smoothly (0 -> 180deg)
-      // Wax seal fades and scales away gently (0.35s)
-      // -------------------------------------------------------------
-      flapControls.start({
-        rotateX: 180,
-        transition: { duration: 0.8, ease: [0.4, 0.0, 0.2, 1] as const },
-      })
+      // 1. Break wax seal & swing flap open seamlessly
       sealControls.start({
-        scale: 1.15,
+        scale: 1.25,
         opacity: 0,
         transition: { duration: 0.35, ease: 'easeOut' },
       })
 
-      // At 0.4s: Flap is edge-on (90deg). Switch z-index to 1 (behind card).
-      // Continuous rotation is unaffected; no React re-render.
-      await sleep(400)
+      flapControls.start({
+        rotateX: 180,
+        transition: { duration: 0.55, ease: [0.33, 1, 0.68, 1] as const },
+      })
+
+      // Fade out the buttons and top badge smoothly
+      uiControls.start({
+        opacity: 0,
+        y: 12,
+        transition: { duration: 0.35, ease: 'easeOut' },
+      })
+
+      // At 220ms (as flap rotates past 90deg edge-on), move flap behind and glide card up
+      await sleep(220)
       if (flapRef.current) {
         flapRef.current.style.zIndex = '1'
       }
-
-      // -------------------------------------------------------------
-      // 0.8s – 1.0s: Flap settles, short natural pause (200ms)
-      // (400ms sleep above + 600ms sleep here = 1000ms = 1.0s mark)
-      // -------------------------------------------------------------
-      await sleep(600)
-
-      // -------------------------------------------------------------
-      // 1.0s – 1.9s: Card gradually emerges (0.9s duration)
-      // Card is at z-index 2 behind front pocket at z-index 3.
-      // -------------------------------------------------------------
-      await cardControls.start({
-        y: '-68%',
-        opacity: 1,
-        boxShadow: '0 8px 16px -2px rgba(58, 42, 34, 0.15)',
-        transition: { duration: 0.9, ease: [0.25, 1, 0.5, 1] as const },
-      })
-
-      // -------------------------------------------------------------
-      // 1.9s – 2.0s: Smooth layering transition (100ms pause)
-      // Card is completely stationary at y: '-68%'.
-      // Discrete z-index change from 2 to 10 ONLY - NO transform changes!
-      // -------------------------------------------------------------
       if (cardRef.current) {
         cardRef.current.style.zIndex = '10'
       }
-      await sleep(100)
 
-      // -------------------------------------------------------------
-      // 2.0s – 2.6s: Card moves forward and settles (0.6s duration)
-      // Continuous interpolation from y: '-68%' to y: -8px, scale: 1.03
-      // -------------------------------------------------------------
-      await cardControls.start({
-        y: -8,
-        scale: 1.03,
-        rotate: 0,
-        opacity: 1,
-        boxShadow:
-          '0 20px 45px -10px rgba(58, 42, 34, 0.32), 0 0 0 1px rgba(184, 145, 58, 0.35)',
-        transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
-      })
-
-      // -------------------------------------------------------------
-      // 2.6s – 3.4s: Envelope moves down and fades away (0.8s duration)
-      // The card remains 100% stationary in viewport center!
-      // -------------------------------------------------------------
-      const envelopeExit = {
-        y: '28%',
-        opacity: 0,
-        scale: 0.96,
-        transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] as const },
-      }
-
+      // 2. Card emerges smoothly into view while envelope softly recedes
       await Promise.all([
-        baseControls.start(envelopeExit),
-        pocketControls.start(envelopeExit),
-        flapControls.start({
-          rotateX: 180,
-          ...envelopeExit,
+        cardControls.start({
+          y: '-20%',
+          scale: 1.04,
+          opacity: 1,
+          boxShadow: '0 25px 50px -12px rgba(58, 42, 34, 0.4)',
+          transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] as const },
         }),
-        uiControls.start({
+        baseControls.start({
           opacity: 0,
-          y: 16,
-          transition: { duration: 0.6, ease: 'easeOut' },
+          scale: 0.96,
+          y: 24,
+          transition: { duration: 0.55, ease: 'easeOut', delay: 0.08 },
+        }),
+        pocketControls.start({
+          opacity: 0,
+          scale: 0.96,
+          y: 24,
+          transition: { duration: 0.55, ease: 'easeOut', delay: 0.08 },
         }),
       ])
 
-      // -------------------------------------------------------------
-      // 3.4s: Handoff to main invitation page
-      // -------------------------------------------------------------
+      // 3. Complete handoff to page with seamless fade
       sessionStorage.setItem('envelope_opened', 'true')
       onOpen()
     } catch {
@@ -416,7 +376,11 @@ export const InvitationEnvelope: React.FC<InvitationEnvelopeProps> = ({
               <motion.div
                 animate={sealControls}
                 initial={{ scale: 1, opacity: 1 }}
-                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-[#8F2336] via-[#7A1F2E] to-[#5E1520] text-gold-300 border-2 border-gold-300/85 shadow-xl flex items-center justify-center p-1 pointer-events-auto"
+                onClick={handleStartOpen}
+                whileHover={prefersReducedMotion ? {} : { scale: 1.08 }}
+                whileTap={prefersReducedMotion ? {} : { scale: 0.95 }}
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-[#8F2336] via-[#7A1F2E] to-[#5E1520] text-gold-300 border-2 border-gold-300/85 shadow-xl flex items-center justify-center p-1 pointer-events-auto cursor-pointer"
+                title={t.envelope.openButton}
               >
                 {/* Wax Seal Outer Ruffled Rim */}
                 <div className="w-full h-full rounded-full border border-gold-300/40 flex flex-col items-center justify-center">

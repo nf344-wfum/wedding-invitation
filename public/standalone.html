@@ -493,17 +493,19 @@
       position: fixed;
       inset: 0;
       z-index: 100;
-      background: rgba(94, 21, 32, 0.8);
-      backdrop-filter: blur(8px);
+      background: rgba(94, 21, 32, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 20px;
-      transition: opacity 0.5s ease;
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s ease;
     }
     .envelope-modal.hidden {
       opacity: 0;
+      visibility: hidden;
       pointer-events: none;
     }
     .envelope-card {
@@ -516,6 +518,11 @@
       text-align: center;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
       position: relative;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease;
+    }
+    .envelope-card.opening {
+      transform: translateY(-24px) scale(1.03);
+      opacity: 0;
     }
     .wax-seal {
       width: 64px;
@@ -899,7 +906,13 @@
 
     function openEnvelope() {
       const modal = document.getElementById('envelopeModal');
-      modal.classList.add('hidden');
+      const card = modal.querySelector('.envelope-card');
+      if (card) {
+        card.classList.add('opening');
+      }
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 350);
     }
 
     // Countdown Timer logic (Target: 2027-01-15T13:00:00+06:00)
