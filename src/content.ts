@@ -427,14 +427,18 @@ export const CONTENT: ContentConfig = {
 
   welcomingCommittee: {
     title: {
-      en: 'With warm compliments',
-      bn: 'শুভেচ্ছান্তে',
+      en: 'Welcoming you',
+      bn: 'অভ্যর্থনায়',
     },
     members: [
-      {
-        en: 'All family members and well-wishers',
-        bn: 'পরিবারের সকল সদস্য ও শুভানুধ্যায়ীবৃন্দ',
-      },
+      { en: 'Humayra', bn: 'হুমায়রা' },
+      { en: 'Raisa', bn: 'রাইসা' },
+      { en: 'Jaima', bn: 'জাইমা' },
+      { en: 'Promi', bn: 'প্রমি' },
+      { en: 'Shanta', bn: 'শান্তা' },
+      { en: 'Soad', bn: 'সোয়াদ' },
+      { en: 'Tamim', bn: 'তামিম' },
+      { en: 'Sanaya', bn: 'সানায়া' },
     ],
   },
 
@@ -500,9 +504,9 @@ export const CONTENT: ContentConfig = {
         floatingRsvp: 'RSVP',
       },
       accordion: {
-        title: 'Hosts & Family',
+        title: 'Hosts & Welcoming Committee',
         withLove: 'With love,',
-        welcoming: 'With warm compliments',
+        welcoming: 'Welcoming you',
       },
       footer: {
         presence: 'Your presence and duas complete our joy.',
@@ -580,9 +584,9 @@ export const CONTENT: ContentConfig = {
         floatingRsvp: 'উপস্থিতি জানান',
       },
       accordion: {
-        title: 'আয়োজনে ও শুভেচ্ছায়',
+        title: 'দাওয়াতান্তে ও অভ্যর্থনায়',
         withLove: 'দাওয়াতান্তে',
-        welcoming: 'শুভেচ্ছান্তে',
+        welcoming: 'অভ্যর্থনায়',
       },
       footer: {
         presence: 'আপনার উপস্থিতি ও দোয়া আমাদের আনন্দকে পূর্ণ করবে।',
