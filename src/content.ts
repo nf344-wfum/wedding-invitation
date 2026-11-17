@@ -433,12 +433,13 @@ export const CONTENT: ContentConfig = {
     members: [
       { en: 'Humayra', bn: 'হুমায়রা' },
       { en: 'Raisa', bn: 'রাইসা' },
-      { en: 'Jaima', bn: 'জাইমা' },
-      { en: 'Promi', bn: 'প্রমি' },
-      { en: 'Shanta', bn: 'শান্তা' },
       { en: 'Soad', bn: 'সোয়াদ' },
+      { en: 'Shanaya', bn: 'শানায়া' },
       { en: 'Tamim', bn: 'তামিম' },
-      { en: 'Sanaya', bn: 'সানায়া' },
+      { en: 'Faiza', bn: 'ফাইজা' },
+      { en: 'Jaima', bn: 'জাইমা' },
+      { en: 'Safwan', bn: 'সাফওয়ান' },
+      { en: 'Saad Bin Anas', bn: 'সাদ বিন আনাস' },
     ],
   },
 
