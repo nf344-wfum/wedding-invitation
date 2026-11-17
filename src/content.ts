@@ -323,17 +323,17 @@ export const CONTENT: ContentConfig = {
 
   contact: {
     whatsappRsvp: {
-      number: '8801725652621',
-      display: '01725652621',
-      international: '+8801725652621',
-      url: 'https://wa.me/8801725652621',
+      number: '8801765058263',
+      display: '01765058263',
+      international: '+8801765058263',
+      url: 'https://wa.me/8801765058263',
     },
     informationPhone: {
-      number: '8801725652621',
-      display: '01725652621',
-      displayBn: '০১৭২৫৬৫২৬২১',
-      international: '+8801725652621',
-      telUrl: 'tel:+8801725652621',
+      number: '8801765058263',
+      display: '01765058263',
+      displayBn: '০১৭৬৫০৫৮২৬৩',
+      international: '+8801765058263',
+      telUrl: 'tel:+8801765058263',
     },
     whatsappMessage: {
       en: "Assalamu Alaikum. I am confirming my attendance for Azraf & Huzaifa's wedding ceremony.",
