@@ -49,7 +49,7 @@ export const Venue: React.FC = () => {
         <RevealSection delay={0.16}>
           <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden rounded-2xl border border-gold-500/60 shadow-gold-card bg-ivory-100">
             <iframe
-              title={lang === 'en' ? 'Prokoushali Convention Hall Google Map' : 'প্রকৌশলী কনভেনশন হল গুগল ম্যাপ'}
+              title={lang === 'en' ? 'Xinxian Restaurant & Event Space Google Map' : 'জিনজিয়ান রেস্টুরেন্ট অ্যান্ড ইভেন্ট স্পেস গুগল ম্যাপ'}
               src={CONTENT.venue.googleMapsEmbedUrl}
               className="absolute inset-0 w-full h-full border-0"
               loading="lazy"
