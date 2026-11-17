@@ -12,7 +12,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
-const STORAGE_KEY = 'fahim_joyee_invitation_lang'
+const STORAGE_KEY = 'azraf_huzaifa_invitation_lang'
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [lang, setLangState] = useState<Language>(() => {
@@ -41,8 +41,8 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       document.documentElement.lang = lang
       document.title =
         lang === 'bn'
-          ? 'ফাহিম & জয়ী | বিবাহোত্তর সংবর্ধনা (বৌভাত)'
-          : 'Fahim & Joyee | Wedding Reception (Bou Bhat)'
+          ? 'আজরাফ & হুজাইফা | বিবাহোত্তর সংবর্ধনা'
+          : 'Azraf & Huzaifa | Wedding Reception'
     }
   }, [lang])
 

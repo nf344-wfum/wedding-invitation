@@ -196,20 +196,20 @@ export const Navbar: React.FC<NavbarProps> = ({
               ? `${glassPillClass} min-h-[44px] px-3.5 py-1.5 hover:border-gold-700`
               : 'px-2 py-1'
           }`}
-          aria-label="Fahim & Joyee"
+          aria-label="Azraf & Huzaifa"
         >
-          {/* Mobile Monogram: F & J */}
+          {/* Mobile Monogram: A & H */}
           <span
             style={haloStyle}
             className="md:hidden font-english-display text-lg font-bold text-crimson-700 tracking-wider whitespace-nowrap"
           >
-            F <span className="font-light italic text-gold-700 text-sm">&amp;</span> J
+            A <span className="font-light italic text-gold-700 text-sm">&amp;</span> H
           </span>
 
           {/* Desktop Brand */}
           <div className="hidden md:flex items-center gap-2">
             <span className="w-7 h-7 rounded-full border border-gold-500/60 bg-ivory-100 flex items-center justify-center font-english-display text-xs font-bold text-crimson-700 shadow-xs">
-              FJ
+              AH
             </span>
             <span
               style={haloStyle}

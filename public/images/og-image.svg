@@ -48,10 +48,10 @@
 
   <!-- Couple Names in Crimson 700 -->
   <text x="600" y="280" font-family="'Noto Serif Bengali', serif" font-size="52" font-weight="700" fill="#7A1F2E" text-anchor="middle">
-    ফাহিম <tspan font-family="'Cormorant Garamond', serif" font-weight="400" fill="#7A5C14" font-style="italic">&amp;</tspan> জয়ী
+    আজরাফ <tspan font-family="'Cormorant Garamond', serif" font-weight="400" fill="#7A5C14" font-style="italic">&amp;</tspan> হুজাইফা
   </text>
   <text x="600" y="336" font-family="'Cormorant Garamond', Georgia, serif" font-size="36" font-weight="600" letter-spacing="7" fill="#7A1F2E" text-anchor="middle">
-    FAHIM &amp; JOYEE
+    AZRAF &amp; HUZAIFA
   </text>
 
   <!-- Center Gold Rings Ornament -->
@@ -66,12 +66,12 @@
 
   <!-- Date & Venue in Ink / Gold -->
   <text x="600" y="428" font-family="'Noto Serif Bengali', serif" font-size="22" font-weight="600" fill="#7A5C14" text-anchor="middle">
-    শনিবার, ২৬ ডিসেম্বর ২০২৬ • দুপুর ১:০০ ঘটিকা
+    শুক্রবার, ১৫ জানুয়ারি ২০২৭ • দুপুর ১:০০ ঘটিকা
   </text>
   <text x="600" y="468" font-family="'Hind Siliguri', sans-serif" font-size="19" font-weight="500" fill="#3A2A22" text-anchor="middle">
-    প্রকৌশলী কনভেনশন হল, জয়দেবপুর, গাজীপুর
+    জিনজিয়ান রেস্টুরেন্ট অ্যান্ড ইভেন্ট স্পেস, উত্তরা, ঢাকা
   </text>
   <text x="600" y="504" font-family="'Inter', sans-serif" font-size="13" font-weight="600" letter-spacing="2.5" fill="#6B5A4C" text-anchor="middle">
-    PROKOUSHALI CONVENTION HALL • JOYDEBPUR, GAZIPUR
+    XINXIAN RESTAURANT &amp; EVENT SPACE • UTTARA, DHAKA
   </text>
 </svg>

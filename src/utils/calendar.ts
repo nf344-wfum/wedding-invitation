@@ -42,12 +42,12 @@ export function downloadCalendarInvite(lang: 'bn' | 'en'): void {
   }
 
   const now = new Date()
-  const uid = `fahim-joyee-wedding-${startDate.getTime()}@invitation`
+  const uid = `azraf-huzaifa-wedding-${startDate.getTime()}@invitation`
 
   const summary =
     lang === 'bn'
-      ? 'বৌভাত অনুষ্ঠান — ফাহিম ও জয়ী'
-      : 'Wedding Reception — Fahim & Joyee'
+      ? 'বিবাহোত্তর সংবর্ধনা — আজরাফ ও হুজাইফা'
+      : 'Wedding Reception — Azraf & Huzaifa'
 
   const location = `${CONTENT.venue.name[lang]}, ${CONTENT.venue.address[lang]}`
 
@@ -59,7 +59,7 @@ export function downloadCalendarInvite(lang: 'bn' | 'en'): void {
   const icsLines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Fahim & Joyee//Wedding Invitation//EN',
+    'PRODID:-//Azraf & Huzaifa//Wedding Invitation//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     'BEGIN:VEVENT',
@@ -77,12 +77,12 @@ export function downloadCalendarInvite(lang: 'bn' | 'en'): void {
     'BEGIN:VALARM',
     'TRIGGER:-P1D',
     'ACTION:DISPLAY',
-    'DESCRIPTION:Reminder: Fahim & Joyee Wedding Reception Tomorrow',
+    'DESCRIPTION:Reminder: Azraf & Huzaifa Wedding Reception Tomorrow',
     'END:VALARM',
     'BEGIN:VALARM',
     'TRIGGER:-PT2H',
     'ACTION:DISPLAY',
-    'DESCRIPTION:Reminder: Fahim & Joyee Wedding Reception starts in 2 hours',
+    'DESCRIPTION:Reminder: Azraf & Huzaifa Wedding Reception starts in 2 hours',
     'END:VALARM',
     'END:VEVENT',
     'END:VCALENDAR',
@@ -93,7 +93,7 @@ export function downloadCalendarInvite(lang: 'bn' | 'en'): void {
   const url = URL.createObjectURL(blob)
   const anchor = document.createElement('a')
   anchor.href = url
-  anchor.download = 'fahim-joyee-bou-bhat-invitation.ics'
+  anchor.download = 'azraf-huzaifa-wedding-invitation.ics'
   document.body.appendChild(anchor)
   anchor.click()
   document.body.removeChild(anchor)

@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
         {/* Understated Monogram & Year */}
         <div className="flex items-center justify-center gap-1.5 text-xs text-gold-300/80 pt-2">
           <IslamicStar size={11} className="text-gold-500" />
-          <span className="font-english-sans tracking-wider">{lang === 'en' ? 'Fahim & Joyee' : 'ফাহিম ও জয়ী'} • 2026</span>
+          <span className="font-english-sans tracking-wider">{lang === 'en' ? 'Azraf & Huzaifa' : 'আজরাফ ও হুজাইফা'} • 2027</span>
           <IslamicStar size={11} className="text-gold-500" />
         </div>
       </RevealSection>

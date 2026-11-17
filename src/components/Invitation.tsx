@@ -25,11 +25,11 @@ export const Invitation: React.FC = () => {
         <>
           Assalamu Alaikum. With the blessings of Allah, we warmly invite you to celebrate the wedding reception of{' '}
           <strong className="font-bold text-crimson-700 tracking-wide underline decoration-gold-500/60 decoration-1 underline-offset-4">
-            Mostafizur Rahman Fahim
+            {CONTENT.groom.fullName.en}
           </strong>{' '}
           and{' '}
           <strong className="font-bold text-crimson-700 tracking-wide underline decoration-gold-500/60 decoration-1 underline-offset-4">
-            Naeema Jannat Joyee
+            {CONTENT.bride.fullName.en}
           </strong>
           . Your presence and duas would make our celebration truly special.
         </>
@@ -40,13 +40,13 @@ export const Invitation: React.FC = () => {
       <>
         আসসালামু আলাইকুম। মহান আল্লাহর অশেষ রহমতে আমাদের প্রিয় সন্তান{' '}
         <strong className="font-bold text-crimson-700 tracking-normal">
-          মোস্তাফিজুর রহমান ফাহিম
+          {CONTENT.groom.fullName.bn}
         </strong>{' '}
         ও{' '}
         <strong className="font-bold text-crimson-700 tracking-normal">
-          নাঈমা জান্নাত (জয়ী)
+          {CONTENT.bride.fullName.bn}
         </strong>
-        -র বৌভাত অনুষ্ঠানে আপনাকে আন্তরিক আমন্ত্রণ জানাচ্ছি। আপনার উপস্থিতি ও দোয়া আমাদের আনন্দকে পূর্ণতা দেবে।
+        -র বিবাহোত্তর সংবর্ধনা অনুষ্ঠানে আপনাকে আন্তরিক আমন্ত্রণ জানাচ্ছি। আপনার উপস্থিতি ও দোয়া আমাদের আনন্দকে পূর্ণতা দেবে।
       </>
     )
   }

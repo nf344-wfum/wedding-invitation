@@ -397,7 +397,7 @@ export const InvitationEnvelope: React.FC<InvitationEnvelopeProps> = ({
               {/* Monogram on Bottom Flap when closed */}
               <div className="absolute bottom-3 inset-x-0 text-center">
                 <span className="font-english-display text-xs sm:text-sm font-bold tracking-widest text-crimson-700/80 uppercase">
-                  Fahim &amp; Joyee
+                  Azraf &amp; Huzaifa
                 </span>
               </div>
             </motion.div>
@@ -416,7 +416,7 @@ export const InvitationEnvelope: React.FC<InvitationEnvelopeProps> = ({
                 <div className="w-full h-full rounded-full border border-gold-300/40 flex flex-col items-center justify-center">
                   <IslamicStar size={10} className="text-gold-300/90 mb-0.5" />
                   <span className="font-english-display text-sm sm:text-base font-bold tracking-wider text-gold-300 leading-none">
-                    F&amp;J
+                    A&amp;H
                   </span>
                 </div>
               </motion.div>
