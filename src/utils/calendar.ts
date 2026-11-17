@@ -46,8 +46,8 @@ export function downloadCalendarInvite(lang: 'bn' | 'en'): void {
 
   const summary =
     lang === 'bn'
-      ? 'বিবাহোত্তর সংবর্ধনা — আজরাফ ও হুজাইফা'
-      : 'Wedding Reception — Azraf & Huzaifa'
+      ? 'বিবাহ অনুষ্ঠান — আজরাফ ও হুজাইফা'
+      : 'Wedding Ceremony — Azraf & Huzaifa'
 
   const location = `${CONTENT.venue.name[lang]}, ${CONTENT.venue.address[lang]}`
 
@@ -59,7 +59,7 @@ export function downloadCalendarInvite(lang: 'bn' | 'en'): void {
   const icsLines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Azraf & Huzaifa//Wedding Invitation//EN',
+    'PRODID:-//Azraf & Huzaifa//Wedding Ceremony Invitation//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     'BEGIN:VEVENT',
@@ -77,12 +77,12 @@ export function downloadCalendarInvite(lang: 'bn' | 'en'): void {
     'BEGIN:VALARM',
     'TRIGGER:-P1D',
     'ACTION:DISPLAY',
-    'DESCRIPTION:Reminder: Azraf & Huzaifa Wedding Reception Tomorrow',
+    'DESCRIPTION:Reminder: Azraf & Huzaifa Wedding Ceremony Tomorrow',
     'END:VALARM',
     'BEGIN:VALARM',
     'TRIGGER:-PT2H',
     'ACTION:DISPLAY',
-    'DESCRIPTION:Reminder: Azraf & Huzaifa Wedding Reception starts in 2 hours',
+    'DESCRIPTION:Reminder: Azraf & Huzaifa Wedding Ceremony starts in 2 hours',
     'END:VALARM',
     'END:VEVENT',
     'END:VCALENDAR',
@@ -93,7 +93,7 @@ export function downloadCalendarInvite(lang: 'bn' | 'en'): void {
   const url = URL.createObjectURL(blob)
   const anchor = document.createElement('a')
   anchor.href = url
-  anchor.download = 'azraf-huzaifa-wedding-invitation.ics'
+  anchor.download = 'azraf-huzaifa-wedding-ceremony-invitation.ics'
   document.body.appendChild(anchor)
   anchor.click()
   document.body.removeChild(anchor)

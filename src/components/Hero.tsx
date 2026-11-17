@@ -277,12 +277,16 @@ export const Hero: React.FC = () => {
             {CONTENT.bride.name[lang]}
           </motion.h1>
 
-          {/* 4. Subtitle "Wedding Reception · Bou Bhat" */}
+          {/* 4. Subtitle "Wedding Ceremony" in artistic script */}
           <motion.p
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.24 }}
-            className="font-bangla-sans text-[11px] sm:text-xs md:text-[11px] lg:text-xs font-medium text-ink tracking-wide mb-1 sm:mb-1.5 drop-shadow-sm"
+            className={`${
+              lang === 'en'
+                ? 'font-artistic text-2xl sm:text-3xl md:text-2xl lg:text-3xl text-crimson-700 tracking-wide leading-none my-1'
+                : 'font-bangla-serif text-sm sm:text-base font-bold text-crimson-700 tracking-wide my-0.5'
+            } drop-shadow-xs`}
           >
             {t.subtitle}
           </motion.p>

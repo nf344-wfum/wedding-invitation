@@ -41,8 +41,8 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       document.documentElement.lang = lang
       document.title =
         lang === 'bn'
-          ? 'আজরাফ & হুজাইফা | বিবাহোত্তর সংবর্ধনা'
-          : 'Azraf & Huzaifa | Wedding Reception'
+          ? 'আজরাফ & হুজাইফা | বিবাহ অনুষ্ঠান'
+          : 'Azraf & Huzaifa | Wedding Ceremony'
     }
   }, [lang])
 

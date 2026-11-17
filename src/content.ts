@@ -3,7 +3,7 @@
  * Single source of truth for all event content, translations, names,
  * dates, addresses, media assets, and feature flags.
  *
- * Wedding Reception: Azraf & Huzaifa
+ * Wedding Ceremony: Azraf & Huzaifa
  * Date: Friday, 15 January 2027
  * Venue: Xinxian Restaurant & Event Space (Uttara)
  */
@@ -336,8 +336,8 @@ export const CONTENT: ContentConfig = {
       telUrl: 'tel:+8801725652621',
     },
     whatsappMessage: {
-      en: "Assalamu Alaikum. I am confirming my attendance for Azraf & Huzaifa's wedding reception ceremony.",
-      bn: 'আসসালামু আলাইকুম। আজরাফ ও হুজাইফার বিবাহোত্তর সংবর্ধনা অনুষ্ঠানে উপস্থিত থাকার বিষয়ে জানাচ্ছি।',
+      en: "Assalamu Alaikum. I am confirming my attendance for Azraf & Huzaifa's wedding ceremony.",
+      bn: 'আসসালামু আলাইকুম। আজরাফ ও হুজাইফার বিবাহ অনুষ্ঠানে উপস্থিত থাকার বিষয়ে জানাচ্ছি।',
     },
   },
 
@@ -447,7 +447,7 @@ export const CONTENT: ContentConfig = {
       bismillah: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
       heroTagline: 'Join us to celebrate',
       heroTitle: 'Azraf & Huzaifa',
-      subtitle: 'Wedding Reception',
+      subtitle: 'Wedding Ceremony',
       dateLine: 'Friday, 15 January 2027',
       countdownLabels: {
         days: 'Days',
@@ -470,7 +470,7 @@ export const CONTENT: ContentConfig = {
       },
       invitationHeading: "You're invited",
       invitationBody:
-        'Assalamu Alaikum. With the blessings of Allah, we warmly invite you to celebrate the wedding reception of Abdullah Azraf and Huzaifa Kabir. Your presence and duas would make our celebration truly special.',
+        'Assalamu Alaikum. With the blessings of Allah, we warmly invite you to celebrate the wedding ceremony of Abdullah Azraf and Huzaifa Kabir. Your presence and duas would make our celebration truly special.',
       familyBlock: {
         groomParentsTitle: "Groom's Parents",
         brideParentsTitle: "Bride's Parents",
@@ -490,7 +490,7 @@ export const CONTENT: ContentConfig = {
         dateStep: 'Date',
         timeStep: 'Time',
         venueStep: 'Venue',
-        lunchReception: 'Lunch Reception',
+        lunchReception: 'Wedding Feast (Lunch)',
       },
       venueHeading: 'Find us',
       rsvpHeading: 'Will you join us?',
@@ -527,7 +527,7 @@ export const CONTENT: ContentConfig = {
       bismillah: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
       heroTagline: 'আনন্দের এই দিনে আপনাকে আমন্ত্রণ',
       heroTitle: 'আজরাফ & হুজাইফা',
-      subtitle: 'বিবাহোত্তর সংবর্ধনা',
+      subtitle: 'বিবাহ অনুষ্ঠান',
       dateLine: '১৫ জানুয়ারি ২০২৭, শুক্রবার',
       countdownLabels: {
         days: 'দিন',
@@ -550,7 +550,7 @@ export const CONTENT: ContentConfig = {
       },
       invitationHeading: 'দাওয়াত',
       invitationBody:
-        'আসসালামু আলাইকুম। মহান আল্লাহর অশেষ রহমতে আমাদের প্রিয় সন্তান আব্দুল্লাহ আজরাফ ও হুজাইফা কবির-এর বিবাহোত্তর সংবর্ধনা অনুষ্ঠানে আপনাকে আন্তরিক আমন্ত্রণ জানাচ্ছি। আপনার উপস্থিতি ও দোয়া আমাদের আনন্দকে পূর্ণতা দেবে।',
+        'আসসালামু আলাইকুম। মহান আল্লাহর অশেষ রহমতে আমাদের প্রিয় সন্তান আব্দুল্লাহ আজরাফ ও হুজাইফা কবির-এর বিবাহ অনুষ্ঠানে আপনাকে আন্তরিক আমন্ত্রণ জানাচ্ছি। আপনার উপস্থিতি ও দোয়া আমাদের আনন্দকে পূর্ণতা দেবে।',
       familyBlock: {
         groomParentsTitle: 'বরের পিতা-মাতা',
         brideParentsTitle: 'কনের পিতা-মাতা',

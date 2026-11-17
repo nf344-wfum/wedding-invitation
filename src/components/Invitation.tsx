@@ -23,7 +23,7 @@ export const Invitation: React.FC = () => {
     if (lang === 'en') {
       return (
         <>
-          Assalamu Alaikum. With the blessings of Allah, we warmly invite you to celebrate the wedding reception of{' '}
+          Assalamu Alaikum. With the blessings of Allah, we warmly invite you to celebrate the wedding ceremony of{' '}
           <strong className="font-bold text-crimson-700 tracking-wide underline decoration-gold-500/60 decoration-1 underline-offset-4">
             {CONTENT.groom.fullName.en}
           </strong>{' '}
@@ -46,7 +46,7 @@ export const Invitation: React.FC = () => {
         <strong className="font-bold text-crimson-700 tracking-normal">
           {CONTENT.bride.fullName.bn}
         </strong>
-        -র বিবাহোত্তর সংবর্ধনা অনুষ্ঠানে আপনাকে আন্তরিক আমন্ত্রণ জানাচ্ছি। আপনার উপস্থিতি ও দোয়া আমাদের আনন্দকে পূর্ণতা দেবে।
+        -র বিবাহ অনুষ্ঠানে আপনাকে আন্তরিক আমন্ত্রণ জানাচ্ছি। আপনার উপস্থিতি ও দোয়া আমাদের আনন্দকে পূর্ণতা দেবে।
       </>
     )
   }

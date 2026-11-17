@@ -25,6 +25,7 @@ export default {
         },
       },
       fontFamily: {
+        'artistic': ['"Great Vibes"', '"Alex Brush"', 'cursive'],
         'bangla-serif': ['"Noto Serif Bengali"', 'serif'],
         'bangla-sans': ['"Hind Siliguri"', 'sans-serif'],
         'english-display': ['"Cormorant Garamond"', 'Georgia', 'serif'],

@@ -363,8 +363,14 @@ export const InvitationEnvelope: React.FC<InvitationEnvelopeProps> = ({
               <div className="w-full h-full rounded-lg border border-gold-500/35 p-3 flex flex-col items-center justify-between">
                 <IslamicStar size={14} className="text-gold-700" />
                 <div>
-                  <span className="block text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-crimson-700 mb-0.5">
-                    {lang === 'en' ? 'Wedding Reception' : 'বৌভাত অনুষ্ঠান'}
+                  <span
+                    className={`block mb-1 text-crimson-700 ${
+                      lang === 'en'
+                        ? 'font-artistic text-xl sm:text-2xl leading-none'
+                        : 'font-bangla-serif text-xs sm:text-sm font-bold uppercase tracking-wider'
+                    }`}
+                  >
+                    {lang === 'en' ? 'Wedding Ceremony' : 'বিবাহ অনুষ্ঠান'}
                   </span>
                   <h3 className="font-english-display sm:font-bangla-serif text-lg sm:text-2xl font-bold text-crimson-700">
                     {t.envelope.coupleNames}

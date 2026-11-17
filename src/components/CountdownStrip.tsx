@@ -48,7 +48,7 @@ export const CountdownStrip: React.FC = () => {
             <div className="flex items-center gap-2 text-gold-300 text-xs sm:text-sm font-medium tracking-wide">
               <Sparkles className="w-3.5 h-3.5 text-gold-300 flex-shrink-0" />
               <span className="uppercase tracking-wider font-english-sans text-[11px] sm:text-xs">
-                {lang === 'bn' ? 'শুভ সংবর্ধনার ক্ষণগণনা' : 'Counting Down To Reception'}
+                {lang === 'bn' ? 'শুভ বিবাহের ক্ষণগণনা' : 'Counting Down To Wedding Ceremony'}
               </span>
             </div>
 
