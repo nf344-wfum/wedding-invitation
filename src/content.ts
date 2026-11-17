@@ -395,8 +395,8 @@ export const CONTENT: ContentConfig = {
       bn: 'হুজাইফা কবির',
     },
     father: {
-      en: 'M.M. Humaun Kabir',
-      bn: 'এম.এম. হুমায়ুন কবীর',
+      en: 'M.M Humaun Kabir',
+      bn: 'এম.এম হুমায়ুন কবীর',
     },
     mother: {
       en: 'Rubina Akter',
@@ -415,8 +415,8 @@ export const CONTENT: ContentConfig = {
     },
     members: [
       {
-        en: 'M.M. Humaun Kabir',
-        bn: 'এম.এম. হুমায়ুন কবীর',
+        en: 'M.M Humaun Kabir',
+        bn: 'এম.এম হুমায়ুন কবীর',
       },
       {
         en: 'Rubina Akter',
